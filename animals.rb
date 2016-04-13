@@ -41,6 +41,14 @@ class Cat
   def move(destination)
     puts "#{@name} is running to the #{destination}."
   end
+
+  def make_up_age
+    @age = 5
+  end
+
+  def report_age
+    puts "#{@name} is #{@age} years old."
+  end
 end
 
 bird = Bird.new
@@ -54,3 +62,5 @@ dog.move('house')
 cat = Cat.new
 cat.make_up_name
 cat.move('window')
+cat.make_up_age
+cat.report_age
