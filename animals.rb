@@ -15,9 +15,7 @@ end
 
 # Dog class
 class Dog
-  def set_name(name)
-    @name = name 
-  end
+  attr_accessor :name, :age
 
   def talk
     puts "#{@name} says Bow Wow!!"
@@ -27,13 +25,6 @@ class Dog
     puts "#{@name} and running to the #{destination}."
   end
 
-  def set_age(age)
-    @age = age
-  end
-
-  def get_age
-    @age
-  end
 end
 
 # Cat class
@@ -64,11 +55,12 @@ bird.make_up_name
 bird.move('tree')
 
 dog = Dog.new
-dog.set_name('Buddy')
+dog.name='Tiny'
+dog.age=3
 dog.move('house')
-dog.set_age(10)
-age = dog.get_age
-puts "Dog is #{age} years old"
+age = dog.age
+name = dog.name
+puts "#{name} is #{age} years old"
 
 cat = Cat.new
 cat.make_up_name
