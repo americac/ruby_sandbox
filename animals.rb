@@ -15,8 +15,8 @@ end
 
 # Dog class
 class Dog
-  def make_up_name
-    @name = 'Tiny'
+  def set_name(name)
+    @name = name 
   end
 
   def talk
@@ -25,6 +25,14 @@ class Dog
 
   def move(destination)
     puts "#{@name} and running to the #{destination}."
+  end
+
+  def set_age(age)
+    @age = age
+  end
+
+  def get_age
+    @age
   end
 end
 
@@ -56,8 +64,11 @@ bird.make_up_name
 bird.move('tree')
 
 dog = Dog.new
-dog.make_up_name
+dog.set_name('Buddy')
 dog.move('house')
+dog.set_age(10)
+age = dog.get_age
+puts "Dog is #{age} years old"
 
 cat = Cat.new
 cat.make_up_name
