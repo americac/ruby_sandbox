@@ -38,6 +38,10 @@ class Animal
     end
     puts "#{@name} is #{@type}."
   end
+
+  def what_what
+     "Hello, my name is what what."
+  end
 end
 
 # Bird class
@@ -55,6 +59,8 @@ end
 class Dog < Animal
   def talk
     puts "#{@name} says Bow Wow!!"
+    what = what_what
+    puts "I called what_what and this is what I got: #{what}"
   end
 
   def move(destination)
@@ -70,6 +76,7 @@ class Cat < Animal
   end
 
   def move(destination)
+    what_what
     puts "#{@name} is running to the #{destination}."
   end
 end
