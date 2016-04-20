@@ -1,3 +1,12 @@
+def calculate
+  amount = 0
+  index = 0
+  while index < prices.length
+    yield prices
+  end
+  amount
+end
+
 def total(prices)
   amount = 0
   index = 0
@@ -30,3 +39,8 @@ prices = [3.00, 25.00, 8.99]
 puts format('%.2f', total(prices))
 puts format('%.2f', refund(prices))
 show_discounts(prices)
+
+calculate do|prices|
+  amount -= prices[index]
+end
+puts format('%.2f', total_amount)
