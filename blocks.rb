@@ -14,10 +14,12 @@ def my_new_method
   yield 'Cairo', 'Berlin'
 end
 
+#This method for none one liners
 my_new_method do |arg1, arg2|
   puts "This is my new block of stuff....and I got #{arg1} and #{arg2}"
+  puts 'Some other stuff'
 end
 
 ## This is another way of doing a block
-
+# For one liner blocks only!
 my_new_method { |arg1, arg2| puts "This is my NEW NEW block of stuff....and I got #{arg1} and #{arg2}" }
