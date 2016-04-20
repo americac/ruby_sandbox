@@ -7,3 +7,13 @@ end
 my_method do| arg1, arg2|
   puts "This is my block of stuff....and I got #{arg1} and #{arg2}"
 end
+
+## Use yield way, below is the same as above
+
+def my_new_method
+  yield 'Cairo', 'Berlin'
+end
+
+my_new_method do |arg1, arg2|
+  puts "This is my new block of stuff....and I got #{arg1} and #{arg2}"
+end
