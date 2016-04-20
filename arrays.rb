@@ -27,4 +27,3 @@ prices = [3.00, 25.00, 8.99]
 puts format('%.2f', total(prices))
 puts format('%.2f', refund(prices))
 show_discounts(prices)
-
