@@ -28,7 +28,3 @@ puts format('%.2f', total(prices))
 puts format('%.2f', refund(prices))
 show_discounts(prices)
 
-#calculate do|prices|
-#  amount -= prices[index]
-#end
-#puts format('%.2f', total_amount)
