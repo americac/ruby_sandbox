@@ -14,10 +14,13 @@ end
 puts "Line 3: #{lines[2]}"
 puts "Line 5: #{lines[6]}"
 
-relevant_lines = [] 
-lines.each do |line|
-  if line.include?("Truncated")
-    relevant_lines << line
-  end
-end
+#relevant_lines = []
+#lines.each do |line|
+#  if line.include?("Truncated")
+#    relevant_lines << line
+#  end
+#end
+
+#This is the same as above, much cleaner and faster
+relevant_lines = lines.find_all { |line| line.include?('Truncated') }
 puts relevant_lines
