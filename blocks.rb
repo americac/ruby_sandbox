@@ -17,3 +17,7 @@ end
 my_new_method do |arg1, arg2|
   puts "This is my new block of stuff....and I got #{arg1} and #{arg2}"
 end
+
+## This is another way of doing a block
+
+my_new_method { |arg1, arg2| puts "This is my NEW NEW block of stuff....and I got #{arg1} and #{arg2}" }
