@@ -1,6 +1,6 @@
 class Candidate
   attr_accessor :name, :age, :occupation, :hobby, :birthplace
-  def initialize (name, age: nil, occupation: nil, hobby: nil, birthplace: 'Sleepy Hallow')
+  def initialize (name, age:, occupation:, hobby: nil, birthplace: 'Sleepy Hallow')
     self.name = name
     self.age = age
     self.occupation = occupation
