@@ -11,3 +11,8 @@ puts protons.has_value?(5)
 protons.each do |element, count|
   puts "#{element}: #{count}"
 end
+
+def area(options)
+  options[:length] * options[:width]
+end
+puts area({:length => 2, :width => 4})
