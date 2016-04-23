@@ -1,11 +1,11 @@
 class Candidate
   attr_accessor :name, :age, :occupation, :hobby, :birthplace
-  def initialize (name, options={})
+  def initialize (name, age: nil, occupation: nil, hobby: nil, birthplace: 'Sleepy Hallow')
     self.name = name
-    self.age = options[:age]
-    self.occupation = options[:occupation]
-    self.hobby = options[:hobby]
-    self.birthplace = options[:birthplace]
+    self.age = age
+    self.occupation = occupation
+    self.hobby = hobby
+    self.birthplace = birthplace
   end
 end
 
@@ -22,6 +22,8 @@ print_summary(barnes)
 amy = Candidate.new("Amy Nguyen", :age => 37, :hobby => "Lacrosse", :occupation => "Engineer", :birthplace => "Seattle")
 print_summary(amy)
 new_candidate = Candidate.new("New Candidate")
+print_summary(new_candidate)
+bad_candidate = Candidate.new("Bad Candidate", aeg: 0, ocpation: 'Nothing')
 print_summary(new_candidate)
 
 raise "The end"
