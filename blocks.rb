@@ -23,3 +23,17 @@ end
 ## This is another way of doing a block
 # For one liner blocks only!
 my_new_method { |arg1, arg2| puts "This is my NEW NEW block of stuff....and I got #{arg1} and #{arg2}" }
+
+def print_block_result
+  block_result = yield
+  puts "BlockResult: #{block_result}"
+end
+
+print_block_result { 1 + 1}
+
+print_block_result do
+  "I'm not the last expresion, so I'm not the return value."
+  "I'm the result!"
+end
+
+print_block_result { "I hated Truncated".include?("Truncated") }
