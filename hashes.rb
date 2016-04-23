@@ -6,3 +6,8 @@ puts protons.has_key?('Ne')
 puts protons.has_key?('X')
 puts protons.has_value?(3)
 puts protons.has_value?(5)
+
+
+protons.each do |element, count|
+  puts "#{element}: #{count}"
+end
