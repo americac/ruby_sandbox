@@ -8,7 +8,20 @@ class Candidate
   end
 end
 
+def print_summary(candidate)
+  puts "Candidate: #{candidate.name}"
+  puts "Age: #{candidate.age}"
+  puts "Occupation: #{candidate.occupation}"
+  puts "Hobby: #{candidate.hobby}"
+  puts "Birthplace: #{candidate.birthplace}"
+end
 
+barnes = Candidate.new("Carl Barnes", 49, "Attorney", , "Miami")
+print_summary(barnes)
+amy = Candidate.new("Amy Nguyen", 37, "Lacrosse", "Engineer", "Seattle")
+print_summary(amy)
+
+raise "The end"
 lines = []
 File.open('votes.txt') do |file|
   lines = file.readlines
