@@ -5,10 +5,6 @@ class Clip
     @comments = []
   end
 
-  def add_comment(comment)
-    comments << comment
-  end
-
   def play
     puts "Playing #{object_id}..."
   end
@@ -20,6 +16,20 @@ end
 
 class Song < Clip
   attr_accessor :beats_per_minute
+end
+
+module AcceptsComments
+  def comments
+    if @comments
+      @comments
+    else
+      @comments = []
+    end
+  end
+
+  def add_comment(comment)
+    comments << comment
+  end
 end
 
 video = Video.new
