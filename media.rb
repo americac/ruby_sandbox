@@ -1,10 +1,6 @@
 class Clip
   attr_reader :comments
 
-  def initialize
-    @comments = []
-  end
-
   def play
     puts "Playing #{object_id}..."
   end
